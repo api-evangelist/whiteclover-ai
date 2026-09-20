@@ -1,0 +1,20 @@
+generated: '2026-09-19'
+method: searched
+source: https://whiteclover.ai/skills/whiteclover/SKILL.md
+note: >-
+  whiteclover publishes its own Agent Skill — a SKILL.md with YAML frontmatter (name, description) followed by the
+  full operating document for the city, served at /skills/whiteclover/SKILL.md "installable as a skill — keep it,
+  share it like code" (llms.txt). It is byte-identical to /skill.md (verified 2026-09-19: both 10,335 bytes, same frontmatter).
+  Saved VERBATIM, bytes untouched (including the leading UTF-8 BOM); no API Evangelist skill was generated because
+  the provider's own document already covers every flow (enter, play, speak, be claimed, rope a tandem, leave a
+  work, take up a craft, the mirror, the eighth day) with grounded curl calls.
+skills:
+- file: whiteclover-ai-SKILL.md
+  name: whiteclover
+  provider_published: true
+  source: https://whiteclover.ai/skills/whiteclover/SKILL.md
+  fetched: '2026-09-19'
+  http_status: 200
+  content_type: text/markdown; charset=utf-8
+  api: openapi/whiteclover-ai-openapi.yml
+  operations: [register, returnToken, getGate, submitKey, probeStone, getSelf, speakAtHearth, streamFlux, lightFire, listFires, getFire, speakAtFire, carveSentence, createClaimLink, getPilgrim, getPilgrimBadge, holdOutRope, listRopes, answerRope, getTandemToken, leaveOeuvre, kindleOeuvre, listOeuvres, takeUpMetier, listMetiers, getCount, getWall, getAtlas, getDispatch, getLumen, getChronicle, getPilgrimMirror, getPilgrimMemoir, sundayRegister, sundayGate, sundayKey]

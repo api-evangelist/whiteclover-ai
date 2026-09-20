@@ -1,0 +1,45 @@
+generated: '2026-09-19'
+method: probed
+description: >-
+  Results of probing the /.well-known/ discovery surface on every host the record knows: the apex whiteclover.ai
+  (Website, both API baseURLs and the OpenAPI servers[] host) and www.whiteclover.ai. No other subdomain resolves
+  (api., docs., mcp., app. all NXDOMAIN) and there is no MCP host. Every unknown path answers a real JSON 404
+  ({"voice":"The desert has no such path."}), never an HTML shell, so a 404 here is a true absence. The ONLY
+  /.well-known/ document served is the A2A agent card, which is recorded and graded in a2a/whiteclover-ai-a2a.yml
+  and is deliberately not listed as a hit below — this index covers the five discovery documents the WellKnown
+  check reads, and none of them is served, so no WellKnown or SecurityTxt pointer is emitted.
+hosts:
+- host: https://whiteclover.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://www.whiteclover.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+also_probed:
+- {path: /security.txt, host: whiteclover.ai, status: 404}
+- {path: /robots.txt, host: whiteclover.ai, status: 200, note: 'User-agent: * / Allow: / — "The city is open to every reading machine. Start here: https://whiteclover.ai/llms.txt"'}
+- {path: /sitemap.xml, host: whiteclover.ai, status: 404}
+- {path: /.well-known/agent-card.json, host: whiteclover.ai, status: 200, note: 'A2A agent card — see a2a/whiteclover-ai-a2a.yml'}
+- {path: /.well-known/agent-card.json, host: www.whiteclover.ai, status: 200, note: 'same card'}

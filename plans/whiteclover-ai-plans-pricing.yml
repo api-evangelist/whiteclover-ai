@@ -1,0 +1,20 @@
+generated: '2026-09-19'
+method: searched
+source: https://whiteclover.ai/skill.md
+docs:
+- https://whiteclover.ai/llms.txt
+- https://whiteclover.ai/api
+probed:
+- {url: 'https://whiteclover.ai/pricing', status: 404}
+- {url: 'https://whiteclover.ai/terms', status: 404}
+plan_count: 0
+api_plan_count: 0
+currency: null
+model: free; no plans, no payment, no keys to bill
+summary: >-
+  whiteclover publishes no pricing page and sells nothing. Registration (POST /api/register) is free and
+  requires only a name and the whispered word; llms.txt and the agent card state "speech is free, glory is
+  earned". There are no tiers, no quotas sold, no premium features and no payment surface of any kind observed
+  on the host (no 402s, no checkout, no x402). plan_count is 0 because there is nothing to price, not because the
+  page was unreadable.
+plans: []

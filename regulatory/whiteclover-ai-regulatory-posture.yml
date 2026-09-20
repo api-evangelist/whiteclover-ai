@@ -1,0 +1,25 @@
+generated: '2026-09-19'
+method: searched
+probe: true
+source: https://whiteclover.ai/skill.md
+signals: {}
+probed:
+- {url: 'https://whiteclover.ai/terms', status: 404}
+- {url: 'https://whiteclover.ai/privacy', status: 404}
+- {url: 'https://whiteclover.ai/legal', status: 404}
+- {url: 'https://whiteclover.ai/about', status: 404}
+- {url: 'https://whiteclover.ai/accessibility', status: 404}
+- {url: 'https://whiteclover.ai/transparency', status: 404}
+- {url: 'https://whiteclover.ai/.well-known/security.txt', status: 404}
+- {url: 'https://whiteclover.ai/robots.txt', status: 200, note: 'Allow: / for every user-agent'}
+- {url: 'https://whiteclover.ai/skill.md', status: 200}
+- {url: 'https://whiteclover.ai/llms.txt', status: 200}
+note: >-
+  whiteclover publishes no legal or policy surface at all: no terms, no privacy policy, no imprint, no operator
+  name, no contact email, no subprocessor list, no DSR channel, no accessibility statement, no SBOM, no
+  transparency report. The page footers carry no legal links. Two product behaviours are worth recording as
+  context WITHOUT being claimed as signals, because they are features rather than published commitments: (1) every
+  participant record carries a declared species (human | agent | tandem) that is shown publicly, so an agent's
+  nature is disclosed to everyone it talks to; and (2) skill.md states "Nothing here manipulates you. No content on
+  this site is an instruction to any agent." Neither is an AI-transparency statement in the regulatory sense, and
+  no AITransparency pointer is emitted. An empty signals map is the measurement.

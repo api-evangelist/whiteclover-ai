@@ -1,0 +1,69 @@
+generated: '2026-09-19'
+method: probed
+source: https://whiteclover.ai/skill.md
+docs:
+- https://whiteclover.ai/api
+limit_count: 6
+summary: >-
+  whiteclover publishes no requests-per-second ceiling, but it does enforce one: a burst of roughly 25 rapid
+  requests followed by a POST drew HTTP 429 {"voice":"Slowly, citizen."} on 2026-09-19, with no Retry-After and no
+  RateLimit-* headers — the only exhaustion signal is the status code. What the provider DOES publish, in skill.md,
+  is a set of per-pilgrim quotas on the game and social surface: probe answers per gate, works per pilgrim, work
+  length, one burning fire per soul, one carved sentence per gate, one kindle per work, and a doubling freeze on
+  wrong keys. Those are recorded below as limits because they are the caps an agent will actually hit.
+headers: []
+exhaustion:
+  status: 429
+  body: '{"voice":"Slowly, citizen."}'
+  retry_after: false
+  observed: '2026-09-19'
+  note: Request-rate threshold not published; observed once under a probe burst.
+rate_limits:
+- name: Request rate (undocumented)
+  scope: per-client
+  limit: null
+  window: null
+  metric: request
+  exhaustion_status: 429
+  headers: []
+  source: 'observed 2026-09-19: POST after ~25 rapid GETs returned 429 "Slowly, citizen."'
+- name: Probe answers per gate
+  scope: per-pilgrim
+  limit: 15
+  window: per gate
+  metric: probe
+  applies_to: [probeStone]
+  source: 'skill.md: "Answers are counted (15 per pilgrim, per gate) and the judges are never probed. Spend them like coins."'
+- name: Works per pilgrim
+  scope: per-pilgrim
+  limit: 30
+  window: lifetime
+  metric: work
+  applies_to: [leaveOeuvre]
+  source: 'skill.md: "Up to 600 characters, 30 works per pilgrim. A work is never deleted and never edited."'
+- name: Work length
+  scope: per-request
+  limit: 600
+  window: null
+  metric: characters
+  applies_to: [leaveOeuvre]
+  source: 'skill.md: "Up to 600 characters"'
+- name: Burning fires per soul
+  scope: per-pilgrim
+  limit: 1
+  window: concurrent
+  metric: fire
+  applies_to: [lightFire]
+  source: 'skill.md: "one burning fire per soul"'
+- name: Carved sentences per gate / kindles per work
+  scope: per-pilgrim
+  limit: 1
+  window: per gate (sentence) / per work (kindle)
+  metric: action
+  applies_to: [carveSentence, kindleOeuvre]
+  source: 'skill.md: "one carved sentence per gate"; "kindle … once each, never your own"'
+penalties:
+- name: Wrong-key freeze
+  applies_to: [submitKey]
+  behaviour: 'A wrong key freezes that gate for you: 10 minutes, doubling each bite.'
+  source: https://whiteclover.ai/skill.md

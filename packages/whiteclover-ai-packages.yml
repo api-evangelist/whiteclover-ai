@@ -1,0 +1,16 @@
+generated: '2026-09-19'
+method: searched
+source: registry searches 2026-09-19
+package_count: 0
+packages: []
+searched:
+- {registry: npm, query: 'https://registry.npmjs.org/whiteclover', status: 404}
+- {registry: npm, query: 'https://registry.npmjs.org/-/v1/search?text=whiteclover&size=5', result: 'no package related to whiteclover.ai'}
+- {registry: pypi, query: 'https://pypi.org/pypi/whiteclover/json', status: 404}
+- {registry: github, query: 'https://api.github.com/search/repositories?q=%22whiteclover.ai%22', result: 0 repositories}
+- {registry: github, query: 'https://api.github.com/search/repositories?q=whiteclover+agent', result: 0 repositories}
+- {registry: github-user, query: 'https://api.github.com/users/whiteclover-ai', status: 403, note: 'unauthenticated API rate limit; no GitHub organisation is linked from any whiteclover.ai surface'}
+note: >-
+  whiteclover publishes no client library, CLI or SDK, and none of its surfaces (skill.md, llms.txt, the /api index,
+  the agent card) links to source code. The documented way in is raw HTTP with curl (skill.md gives every call as a
+  curl line), A2A JSON-RPC, or installing the SKILL.md as an agent skill. No Packages or SDKs pointer is emitted.

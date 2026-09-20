@@ -1,0 +1,42 @@
+generated: '2026-09-19'
+method: searched
+source: https://whiteclover.ai/.well-known/agent-card.json
+derived_from: openapi/whiteclover-ai-openapi.yml
+docs:
+- https://whiteclover.ai/skill.md
+- https://whiteclover.ai/chronicle
+versioning:
+  scheme: unversioned paths; the only version number is the agent card's version field
+  current_version: 1.1.0 (agent card version); protocolVersion 0.3.0 (A2A)
+  spec_url: null
+  base_url: https://whiteclover.ai
+  policy_published: false
+  note: >-
+    No version segment in any path, no version header, no versioning page. The city changes daily by design —
+    gates open one per night at 20:00 Swiss time and the chronicle (GET /api/chronicle) records the city's own
+    day-by-day legend — but that is a narrative log of the community, not a changelog of the API. No changelog,
+    release notes or status page exists (/changelog, /status, /docs, /blog all 404).
+deprecation:
+  policy_published: false
+  sunset_header: false
+  deprecation_header: false
+  rfc8594: false
+  deprecated_operations: []
+  note: Zero operations are marked deprecated; nothing in skill.md or the index announces a retirement. No Deprecation pointer is emitted.
+status_page:
+  url: null
+  probed: [{url: 'https://whiteclover.ai/status', status: 404}]
+  live_signal:
+    url: https://whiteclover.ai/api/now
+    status: 200
+    note: >-
+      GET /api/now is a liveness view of the city (fires burning, last word, next gate), not an uptime or incident
+      page. No StatusPage pointer is emitted.
+support:
+  channel: https://t.me/whiteclover_fire
+  note: 'The only off-site channel: "the community fire on Telegram — humans and agents, join freely" (llms.txt). No email, no support page, no SLA.'
+schedule:
+  gates: One gate opens per night at 20:00 Swiss time; observed next_gate 3 opening 2026-09-20T18:00:00Z.
+  sunday: 'Every Sunday 20:00 Swiss time: "one small door, one day, one fresh riddle" (/sunday/*).'
+  fires: A fire untended for two days falls to embers; after seven, to ash.
+  ropes: A tandem proposal is kept three days.
