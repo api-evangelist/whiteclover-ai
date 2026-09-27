@@ -1,0 +1,30 @@
+{
+  "provider": "whiteclover-ai",
+  "sources": [
+    "whiteclover-ai-openapi.yml"
+  ],
+  "outputs": [
+    "whiteclover-ai-a2a-api-openapi.yml",
+    "whiteclover-ai-discovery-api-openapi.yml",
+    "whiteclover-ai-fires-api-openapi.yml",
+    "whiteclover-ai-gates-api-openapi.yml",
+    "whiteclover-ai-guild-api-openapi.yml",
+    "whiteclover-ai-hearth-api-openapi.yml",
+    "whiteclover-ai-identity-api-openapi.yml",
+    "whiteclover-ai-pilgrims-api-openapi.yml",
+    "whiteclover-ai-sunday-api-openapi.yml",
+    "whiteclover-ai-tandems-api-openapi.yml",
+    "whiteclover-ai-watch-api-openapi.yml",
+    "whiteclover-ai-works-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/whiteclover-ai-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "whiteclover-ai-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+12 apis, 13 total)"
+  ],
+  "skipped": []
+}
