@@ -1,7 +1,7 @@
 {
   "provider": "whiteclover-ai",
   "sources": [
-    "whiteclover-ai-openapi.yml"
+    "_original/whiteclover-ai-openapi.yml"
   ],
   "outputs": [
     "whiteclover-ai-a2a-api-openapi.yml",
@@ -17,14 +17,26 @@
     "whiteclover-ai-watch-api-openapi.yml",
     "whiteclover-ai-works-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/whiteclover-ai-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "whiteclover-ai-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+12 apis, 13 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "whiteclover-ai-a2a-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-discovery-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-fires-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-gates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-guild-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-hearth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-identity-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-pilgrims-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-sunday-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-tandems-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-watch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "whiteclover-ai-works-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

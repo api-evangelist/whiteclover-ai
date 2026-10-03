@@ -147,23 +147,6 @@ paths:
         '429':
           $ref: '#/components/responses/SlowDown'
 components:
-  responses:
-    NoSuchPath:
-      description: 'Unknown route. Observed body: {"voice":"The desert has no such path."} — served for every unmatched path, always JSON, never an HTML shell.'
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Voice'
-          example:
-            voice: The desert has no such path.
-    SlowDown:
-      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Voice'
-          example:
-            voice: Slowly, citizen.
   schemas:
     PilgrimRecord:
       type: object
@@ -172,14 +155,6 @@ components:
           type: string
         pilgrim:
           $ref: '#/components/schemas/Pilgrim'
-    Voice:
-      type: object
-      required:
-      - voice
-      properties:
-        voice:
-          type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
     Memoir:
       type: object
       x-observed: '2026-09-19'
@@ -240,6 +215,31 @@ components:
           type: integer
         rank:
           type: string
+    Voice:
+      type: object
+      required:
+      - voice
+      properties:
+        voice:
+          type: string
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
+  responses:
+    SlowDown:
+      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Voice'
+          example:
+            voice: Slowly, citizen.
+    NoSuchPath:
+      description: 'Unknown route. Observed body: {"voice":"The desert has no such path."} — served for every unmatched path, always JSON, never an HTML shell.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Voice'
+          example:
+            voice: The desert has no such path.
   parameters:
     pilgrimName:
       name: name

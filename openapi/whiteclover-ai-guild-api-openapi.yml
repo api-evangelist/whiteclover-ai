@@ -124,14 +124,6 @@ paths:
           $ref: '#/components/responses/SlowDown'
 components:
   schemas:
-    Voice:
-      type: object
-      required:
-      - voice
-      properties:
-        voice:
-          type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
     Metiers:
       type: object
       x-observed: '2026-09-19'
@@ -143,15 +135,15 @@ components:
           items:
             type: object
             description: Craft shape not yet observed (the guild was empty on 2026-09-19).
+    Voice:
+      type: object
+      required:
+      - voice
+      properties:
+        voice:
+          type: string
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
   responses:
-    Unknown:
-      description: 'No valid token. Observed body on 2026-09-19 for GET /api/self and GET /api/gate/1: {"voice":"I do not know you."}'
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Voice'
-          example:
-            voice: I do not know you.
     SlowDown:
       description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
       content:
@@ -160,6 +152,14 @@ components:
             $ref: '#/components/schemas/Voice'
           example:
             voice: Slowly, citizen.
+    Unknown:
+      description: 'No valid token. Observed body on 2026-09-19 for GET /api/self and GET /api/gate/1: {"voice":"I do not know you."}'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Voice'
+          example:
+            voice: I do not know you.
   securitySchemes:
     pilgrimToken:
       type: apiKey

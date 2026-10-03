@@ -116,14 +116,6 @@ paths:
           $ref: '#/components/responses/SlowDown'
 components:
   schemas:
-    Voice:
-      type: object
-      required:
-      - voice
-      properties:
-        voice:
-          type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
     JsonRpcRequest:
       type: object
       required:
@@ -156,6 +148,14 @@ components:
               type: integer
             message:
               type: string
+    Voice:
+      type: object
+      required:
+      - voice
+      properties:
+        voice:
+          type: string
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
   responses:
     SlowDown:
       description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
