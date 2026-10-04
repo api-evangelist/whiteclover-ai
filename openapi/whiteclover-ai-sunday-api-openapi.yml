@@ -143,14 +143,6 @@ components:
           type: string
           description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
   responses:
-    SlowDown:
-      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Voice'
-          example:
-            voice: Slowly, citizen.
     Unknown:
       description: 'No valid token. Observed body on 2026-09-19 for GET /api/self and GET /api/gate/1: {"voice":"I do not know you."}'
       content:
@@ -159,6 +151,14 @@ components:
             $ref: '#/components/schemas/Voice'
           example:
             voice: I do not know you.
+    SlowDown:
+      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Voice'
+          example:
+            voice: Slowly, citizen.
   parameters:
     gateNumber:
       name: n

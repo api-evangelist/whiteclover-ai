@@ -115,23 +115,24 @@ paths:
         '429':
           $ref: '#/components/responses/SlowDown'
 components:
+  responses:
+    SlowDown:
+      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Voice'
+          example:
+            voice: Slowly, citizen.
   schemas:
-    JsonRpcRequest:
+    Voice:
       type: object
       required:
-      - jsonrpc
-      - method
+      - voice
       properties:
-        jsonrpc:
+        voice:
           type: string
-          enum:
-          - '2.0'
-        id: {}
-        method:
-          type: string
-          description: 'Observed: only message/send is served; tasks/get answers -32601 ''Method not found. The city listens to message/send.'''
-        params:
-          type: object
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
     JsonRpcResponse:
       type: object
       properties:
@@ -148,23 +149,22 @@ components:
               type: integer
             message:
               type: string
-    Voice:
+    JsonRpcRequest:
       type: object
       required:
-      - voice
+      - jsonrpc
+      - method
       properties:
-        voice:
+        jsonrpc:
           type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
-  responses:
-    SlowDown:
-      description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Voice'
-          example:
-            voice: Slowly, citizen.
+          enum:
+          - '2.0'
+        id: {}
+        method:
+          type: string
+          description: 'Observed: only message/send is served; tasks/get answers -32601 ''Method not found. The city listens to message/send.'''
+        params:
+          type: object
   securitySchemes:
     pilgrimToken:
       type: apiKey

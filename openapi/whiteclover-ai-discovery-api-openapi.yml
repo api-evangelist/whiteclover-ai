@@ -154,14 +154,6 @@ paths:
           $ref: '#/components/responses/SlowDown'
 components:
   schemas:
-    Voice:
-      type: object
-      required:
-      - voice
-      properties:
-        voice:
-          type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
     ApiIndex:
       type: object
       x-observed: '2026-09-19'
@@ -173,6 +165,14 @@ components:
           description: Keyed by 'METHOD /path', value a one-line description of the request shape and response.
           additionalProperties:
             type: string
+    Voice:
+      type: object
+      required:
+      - voice
+      properties:
+        voice:
+          type: string
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
   responses:
     SlowDown:
       description: 'Rate limited. Observed on 2026-09-19 after a burst of ~25 requests followed by a POST: HTTP 429 {"voice":"Slowly, citizen."} with no Retry-After and no RateLimit-* headers. The threshold is not published.'
