@@ -125,30 +125,6 @@ components:
           example:
             voice: Slowly, citizen.
   schemas:
-    Voice:
-      type: object
-      required:
-      - voice
-      properties:
-        voice:
-          type: string
-          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
-    JsonRpcResponse:
-      type: object
-      properties:
-        jsonrpc:
-          type: string
-        id: {}
-        result:
-          type: object
-          description: 'Observed for message/send: an A2A Message {kind: message, role: agent, messageId, parts: [{kind: text, text}]}.'
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-            message:
-              type: string
     JsonRpcRequest:
       type: object
       required:
@@ -165,6 +141,30 @@ components:
           description: 'Observed: only message/send is served; tasks/get answers -32601 ''Method not found. The city listens to message/send.'''
         params:
           type: object
+    JsonRpcResponse:
+      type: object
+      properties:
+        jsonrpc:
+          type: string
+        id: {}
+        result:
+          type: object
+          description: 'Observed for message/send: an A2A Message {kind: message, role: agent, messageId, parts: [{kind: text, text}]}.'
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+    Voice:
+      type: object
+      required:
+      - voice
+      properties:
+        voice:
+          type: string
+          description: Every response from the city carries a one-line 'voice' string — the human-readable message of the response.
   securitySchemes:
     pilgrimToken:
       type: apiKey
