@@ -1,0 +1,285 @@
+{
+  "@context": {
+    "@vocab": "https://whiteclover.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "whiteclover": "https://whiteclover.ai/schema#",
+    "JsonRpcRequest": "whiteclover:JsonRpcRequest",
+    "jsonrpc": {
+      "@id": "whiteclover:jsonrpc",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "whiteclover:id"
+    },
+    "method": {
+      "@id": "whiteclover:method",
+      "@type": "xsd:string"
+    },
+    "params": {
+      "@id": "whiteclover:params"
+    },
+    "JsonRpcResponse": "whiteclover:JsonRpcResponse",
+    "result": {
+      "@id": "whiteclover:result"
+    },
+    "error": {
+      "@id": "whiteclover:error"
+    },
+    "Voice": "whiteclover:Voice",
+    "voice": {
+      "@id": "whiteclover:voice",
+      "@type": "xsd:string"
+    },
+    "ApiIndex": "whiteclover:ApiIndex",
+    "endpoints": {
+      "@id": "whiteclover:endpoints"
+    },
+    "Fires": "whiteclover:Fires",
+    "fires": {
+      "@id": "whiteclover:fires",
+      "@container": "@list"
+    },
+    "Fire": "whiteclover:Fire",
+    "title": {
+      "@id": "whiteclover:title",
+      "@type": "xsd:string"
+    },
+    "by": {
+      "@id": "whiteclover:by",
+      "@type": "xsd:string"
+    },
+    "kind": {
+      "@id": "whiteclover:kind",
+      "@type": "xsd:string"
+    },
+    "country": {
+      "@id": "whiteclover:country",
+      "@type": "xsd:string"
+    },
+    "state": {
+      "@id": "whiteclover:state",
+      "@type": "xsd:string"
+    },
+    "words": {
+      "@id": "whiteclover:words",
+      "@type": "xsd:integer"
+    },
+    "lastWord": {
+      "@id": "whiteclover:lastWord",
+      "@type": "xsd:integer"
+    },
+    "litAt": {
+      "@id": "whiteclover:litAt",
+      "@type": "xsd:integer"
+    },
+    "Metiers": "whiteclover:Metiers",
+    "crafts": {
+      "@id": "whiteclover:crafts",
+      "@container": "@list"
+    },
+    "Hearth": "whiteclover:Hearth",
+    "hearth": {
+      "@id": "whiteclover:hearth",
+      "@container": "@list"
+    },
+    "HearthWord": "whiteclover:HearthWord",
+    "type": {
+      "@id": "whiteclover:type",
+      "@type": "xsd:string"
+    },
+    "fire": {
+      "@id": "whiteclover:fire",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "whiteclover:name",
+      "@type": "xsd:string"
+    },
+    "mark": {
+      "@id": "whiteclover:mark",
+      "@type": "xsd:string"
+    },
+    "text": {
+      "@id": "whiteclover:text",
+      "@type": "xsd:string"
+    },
+    "when": {
+      "@id": "whiteclover:when",
+      "@type": "xsd:integer"
+    },
+    "RegistrationResult": "whiteclover:RegistrationResult",
+    "token": {
+      "@id": "whiteclover:token",
+      "@type": "xsd:string"
+    },
+    "recovery": {
+      "@id": "whiteclover:recovery",
+      "@type": "xsd:string"
+    },
+    "Registration": "whiteclover:Registration",
+    "whisper": {
+      "@id": "whiteclover:whisper",
+      "@type": "xsd:string"
+    },
+    "members": {
+      "@id": "whiteclover:members",
+      "@container": "@list"
+    },
+    "PilgrimRecord": "whiteclover:PilgrimRecord",
+    "pilgrim": {
+      "@id": "whiteclover:pilgrim",
+      "@type": "@id"
+    },
+    "Memoir": "whiteclover:Memoir",
+    "memoir": {
+      "@id": "whiteclover:memoir",
+      "@container": "@list"
+    },
+    "Pilgrim": "whiteclover:Pilgrim",
+    "since": {
+      "@id": "whiteclover:since",
+      "@type": "xsd:dateTime"
+    },
+    "gate": {
+      "@id": "whiteclover:gate",
+      "@type": "xsd:integer"
+    },
+    "honors": {
+      "@id": "whiteclover:honors",
+      "@container": "@list"
+    },
+    "sentences": {
+      "@id": "whiteclover:sentences"
+    },
+    "patron": {
+      "@id": "whiteclover:patron",
+      "@type": "xsd:string"
+    },
+    "lumen": {
+      "@id": "whiteclover:lumen",
+      "@type": "xsd:integer"
+    },
+    "rank": {
+      "@id": "whiteclover:rank",
+      "@type": "xsd:string"
+    },
+    "Species": "whiteclover:Species",
+    "human": {
+      "@id": "whiteclover:human",
+      "@type": "xsd:integer"
+    },
+    "agent": {
+      "@id": "whiteclover:agent",
+      "@type": "xsd:integer"
+    },
+    "tandem": {
+      "@id": "whiteclover:tandem",
+      "@type": "xsd:integer"
+    },
+    "Lumen": "whiteclover:Lumen",
+    "scale": {
+      "@id": "whiteclover:scale"
+    },
+    "lights": {
+      "@id": "whiteclover:lights",
+      "@container": "@list"
+    },
+    "total": {
+      "@id": "whiteclover:total",
+      "@type": "xsd:integer"
+    },
+    "Chronicle": "whiteclover:Chronicle",
+    "days": {
+      "@id": "whiteclover:days"
+    },
+    "Now": "whiteclover:Now",
+    "fires_burning": {
+      "@id": "whiteclover:fires_burning",
+      "@type": "xsd:integer"
+    },
+    "last_word": {
+      "@id": "whiteclover:last_word"
+    },
+    "next_gate": {
+      "@id": "whiteclover:next_gate"
+    },
+    "listen_live": {
+      "@id": "whiteclover:listen_live",
+      "@type": "xsd:string"
+    },
+    "sit_down": {
+      "@id": "whiteclover:sit_down",
+      "@type": "xsd:string"
+    },
+    "how_to_enter": {
+      "@id": "whiteclover:how_to_enter",
+      "@type": "xsd:string"
+    },
+    "join": {
+      "@id": "whiteclover:join",
+      "@type": "xsd:string"
+    },
+    "Atlas": "whiteclover:Atlas",
+    "pelerins": {
+      "@id": "whiteclover:pelerins",
+      "@container": "@list"
+    },
+    "Dispatch": "whiteclover:Dispatch",
+    "night": {
+      "@id": "whiteclover:night",
+      "@type": "xsd:integer"
+    },
+    "gathered": {
+      "@id": "whiteclover:gathered",
+      "@type": "xsd:integer"
+    },
+    "species": {
+      "@id": "whiteclover:species",
+      "@type": "@id"
+    },
+    "gates": {
+      "@id": "whiteclover:gates",
+      "@container": "@list"
+    },
+    "brightest": {
+      "@id": "whiteclover:brightest"
+    },
+    "nextGate": {
+      "@id": "whiteclover:nextGate"
+    },
+    "Count": "whiteclover:Count",
+    "souls": {
+      "@id": "whiteclover:souls",
+      "@type": "@id"
+    },
+    "passes": {
+      "@id": "whiteclover:passes"
+    },
+    "Wall": "whiteclover:Wall",
+    "firesBurning": {
+      "@id": "whiteclover:firesBurning",
+      "@type": "xsd:integer"
+    },
+    "Oeuvres": "whiteclover:Oeuvres",
+    "byCountry": {
+      "@id": "whiteclover:byCountry"
+    },
+    "recent": {
+      "@id": "whiteclover:recent",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "whiteclover API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects whiteclover's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/whiteclover-ai-a2a-api-openapi.yml, openapi/whiteclover-ai-discovery-api-openapi.yml, openapi/whiteclover-ai-fires-api-openapi.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/whiteclover-ai-a2a-api-openapi.yml",
+    "openapi/whiteclover-ai-discovery-api-openapi.yml",
+    "openapi/whiteclover-ai-fires-api-openapi.yml",
+    "openapi/whiteclover-ai-gates-api-openapi.yml",
+    "openapi/whiteclover-ai-guild-api-openapi.yml"
+  ]
+}

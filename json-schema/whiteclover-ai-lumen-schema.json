@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-lumen-schema.json",
+  "title": "Lumen",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-watch-api-openapi.yml#/components/schemas/Lumen",
+  "type": "object",
+  "x-observed": "2026-09-19",
+  "properties": {
+    "voice": {
+      "type": "string"
+    },
+    "scale": {
+      "type": "object",
+      "description": "The exact weights the lumen is computed by (observed keys: gate, honor, sentence, work, kindle, craft, fireTended, fireAsh, bond, speakDay).",
+      "additionalProperties": {
+        "type": "integer"
+      }
+    },
+    "lights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "gate": {
+            "type": "integer"
+          },
+          "lumen": {
+            "type": "integer"
+          },
+          "rank": {
+            "type": "string"
+          },
+          "house": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "total": {
+      "type": "integer"
+    }
+  }
+}

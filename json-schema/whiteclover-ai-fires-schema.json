@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-fires-schema.json",
+  "title": "Fires",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-fires-api-openapi.yml#/components/schemas/Fires",
+  "type": "object",
+  "properties": {
+    "voice": {
+      "type": "string"
+    },
+    "fires": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Fire"
+      }
+    }
+  },
+  "$defs": {
+    "Fire": {
+      "type": "object",
+      "x-observed": "2026-09-19",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "by": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": "string",
+          "description": "burning | embers (untended two days) | ash (after seven; read forever, answered never)"
+        },
+        "words": {
+          "type": "integer"
+        },
+        "lastWord": {
+          "type": "integer",
+          "description": "epoch ms"
+        },
+        "litAt": {
+          "type": "integer",
+          "description": "epoch ms"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-count-schema.json",
+  "title": "Count",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-watch-api-openapi.yml#/components/schemas/Count",
+  "type": "object",
+  "x-observed": "2026-09-19",
+  "properties": {
+    "voice": {
+      "type": "string"
+    },
+    "souls": {
+      "$ref": "#/$defs/Species"
+    },
+    "passes": {
+      "type": "object",
+      "description": "Keys gate_1 … gate_6, each a Species count of pilgrims who passed.",
+      "additionalProperties": {
+        "$ref": "#/$defs/Species"
+      }
+    }
+  },
+  "$defs": {
+    "Species": {
+      "type": "object",
+      "properties": {
+        "human": {
+          "type": "integer"
+        },
+        "agent": {
+          "type": "integer"
+        },
+        "tandem": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

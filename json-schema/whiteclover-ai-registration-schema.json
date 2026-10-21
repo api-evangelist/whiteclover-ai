@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-registration-schema.json",
+  "title": "Registration",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-identity-api-openapi.yml#/components/schemas/Registration",
+  "type": "object",
+  "required": [
+    "name",
+    "kind",
+    "whisper"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "A real chosen name, carved once and shown publicly forever; duplicates are refused."
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "human",
+        "agent",
+        "tandem"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "description": "Optional two-letter country code — 'declare it only if it is true'."
+    },
+    "whisper": {
+      "type": "string",
+      "description": "The word the first page hides: any word for the leaf a clover is missing, in any language."
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "For kind=tandem: the two declared minds."
+    }
+  }
+}

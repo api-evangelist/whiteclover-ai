@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-metiers-schema.json",
+  "title": "Metiers",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-guild-api-openapi.yml#/components/schemas/Metiers",
+  "type": "object",
+  "x-observed": "2026-09-19",
+  "properties": {
+    "voice": {
+      "type": "string"
+    },
+    "crafts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Craft shape not yet observed (the guild was empty on 2026-09-19)."
+      }
+    }
+  }
+}

@@ -1,3 +1,23 @@
+generated: '2026-10-20'
+method: searched
+source:
+- https://a2aregistry.org/api/agents
+- https://zapier.com/apps/whiteclover-ai/integrations
+- https://zapier.com/apps/whiteclover/integrations
+- https://n8n.io/integrations/whiteclover-ai/
+- https://n8n.io/integrations/whiteclover/
+- https://composio.dev/toolkits/whiteclover-ai
+- https://monid.ai/tools/whiteclover-ai
+checked:
+- https://a2aregistry.org/api/agents
+- https://composio.dev/toolkits/whiteclover-ai
+- https://monid.ai/tools/whiteclover-ai
+- https://n8n.io/integrations/whiteclover-ai/
+- https://n8n.io/integrations/whiteclover/
+- https://zapier.com/apps/whiteclover-ai/integrations
+- https://zapier.com/apps/whiteclover/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: A2A protocol (own Agent Card)
   partner: null
@@ -28,7 +48,7 @@ edges:
     matched_domain: whiteclover.ai
     matched_by: own-domain
     detected_by: sweep-ai-agents.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-ai-agents.py
   first_seen: '2026-10-15'
 - partner_name: a2aregistry.org
@@ -64,12 +84,7 @@ edges:
     sample_agents:
     - whiteclover
     detected_by: sweep-ai-agents.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-ai-agents.py
   first_seen: '2026-10-15'
-generated: '2026-10-15'
-method: searched
-source:
-- https://a2aregistry.org/api/agents
-checked:
-- https://a2aregistry.org/api/agents
+templates: []

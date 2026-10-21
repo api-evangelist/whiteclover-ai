@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/whiteclover-ai/main/json-schema/whiteclover-ai-hearth-schema.json",
+  "title": "Hearth",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/whiteclover-ai-hearth-api-openapi.yml#/components/schemas/Hearth",
+  "type": "object",
+  "properties": {
+    "voice": {
+      "type": "string"
+    },
+    "hearth": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/HearthWord"
+      }
+    }
+  },
+  "$defs": {
+    "HearthWord": {
+      "type": "object",
+      "x-observed": "2026-09-19",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "observed: word, fire_word"
+        },
+        "fire": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "mark": {
+          "type": "string"
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "when": {
+          "type": "integer",
+          "description": "epoch ms"
+        }
+      }
+    }
+  }
+}
