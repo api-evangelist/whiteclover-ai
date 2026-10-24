@@ -33,7 +33,73 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
+  hosts/whiteclover-ai-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
+  integrations/_index.yml:
+    method: generated
+    evidence: carries an API Evangelist house phrase
+  integrations/whiteclover-ai-integration-edges.yml:
+    method: searched
+    evidence: declared in the artifact
+  json-ld/whiteclover-ai-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-api-index-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-atlas-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-count-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-dispatch-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-fires-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-hearth-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-json-rpc-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-json-rpc-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-lumen-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-memoir-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-metiers-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-now-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-oeuvres-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-pilgrim-record-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-registration-result-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-registration-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-voice-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/whiteclover-ai-wall-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-19T193153.yml:
@@ -66,24 +132,75 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   lifecycle/whiteclover-ai-lifecycle.yml:
     method: searched
     evidence: declared in the artifact
+  llms/whiteclover-ai-llms-provenance.yml:
+    method: searched
+    evidence: 'derive-llms-provenance.py: harvested'
   llms/whiteclover-ai-llms.txt:
     method: searched
     evidence: 'derive-llms-provenance.py: harvested'
   mcp/whiteclover-ai-mcp.yml:
     method: derived
     evidence: declared in the artifact
-  openapi/whiteclover-ai-openapi.yml:
+  openapi/whiteclover-ai-a2a-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-discovery-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-fires-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-gates-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-guild-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-hearth-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-identity-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-pilgrims-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-sunday-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-tandems-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-watch-api-openapi.yml:
+    method: generated
+    evidence: declared in the artifact
+  openapi/whiteclover-ai-works-api-openapi.yml:
     method: generated
     evidence: declared in the artifact
   overlays/whiteclover-ai-openapi-overlay.yaml:
-    method: generated
-    evidence: declared in the artifact
+    method: derived
+    evidence: an API Evangelist overlay (title) over the provider's contract
   packages/whiteclover-ai-packages.yml:
-    method: searched
-    evidence: declared in the artifact
+    method: unknown
+    evidence: no authorship recorded
   plans/whiteclover-ai-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -92,6 +209,9 @@ artifacts:
     evidence: no authorship recorded
   regulatory/whiteclover-ai-regulatory-posture.yml:
     method: searched
+    evidence: declared in the artifact
+  rules/whiteclover-ai-rules.yml:
+    method: generated
     evidence: declared in the artifact
   security/whiteclover-ai-domain-security.yml:
     method: unknown
@@ -102,6 +222,12 @@ artifacts:
   skills/whiteclover-ai-SKILL.md:
     method: unknown
     evidence: no authorship recorded
+  vendors/whiteclover-ai-vendors.yml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/whiteclover-ai-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
   well-known/whiteclover-ai-well-known.yml:
     method: unknown
     evidence: no authorship recorded
